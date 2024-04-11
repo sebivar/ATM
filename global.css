@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+
+    --black : #000000;
+    --dark-grey : #252631;
+    --white : #FFFFFF;
+    --orange : #FFAB2B;
+    --pink : #FE4D97;
+    --light-grey : #979797;
+}
+
+.body {
+    margin: 0;
+}
+
+.h1-text {
+    font-family: "Roboto" , sans-serif ;
+    font-weight: 500 ;
+    font-size: 50px;
+}
+
+.regular-text {
+
+    font-family: "Roboto" , sans-serif ;
+    font-weight: 500 ;
+    font-size: 20px;
+    color: var(--dark-grey);
+}
+
+.info-text {
+    font-family: "Roboto" , sans-serif ;
+    font-weight: 500 ;
+    font-size: 30px;
+    color: var(--light-grey);
+}
+
+.button-text {
+    font-family: "Roboto" , sans-serif ;
+    font-weight: 500 ;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.input {
+
+    padding-left: 16px;
+    padding-bottom: 15px;
+    padding-top: 18px;
+    padding-right: 282px;
+    border: 1px solid #E9EEF2 ;
+    border-radius: 5px;
+    font-family: "Roboto" , sans-serif ;
+    font-weight: 500 ;
+    font-size: 14px;
+    color: var(--dark-grey);
+
+}
+
+::placeholder {
+    
+    font-family: "Roboto" , sans-serif ;
+    font-weight: 500 ;
+    font-size: 14px;
+    color: #778CA2 ;
+}
+
+.input:focus {
+
+    outline: 0px;
+    border: 1px solid var(--light-grey) ;
+
+}
+
+.input:hover {
+
+    outline: 0px;
+    border: 1px solid var(--light-grey) ;
+
+}
+
+.btn {
+    font-family: "Roboto" , sans-serif ;
+    font-weight: 500 ;
+    font-size: 14px;
+    color: var(--white);
+    text-align: center;
+    width: 91px;
+    height: 30px;
+}
+
+.btn-regular {
+    background-color: var(--orange);
+    outline: 0px;
+    border: var(--orange);
+    border-radius: 4px;
+}
+
+.btn-regular:hover {
+    background-color: #f89500;
+    cursor: pointer;
+}
+
+
+.btn-cancel {
+    background-color: var(--pink);
+    outline: 0px;
+    border: var(--orange);
+    border-radius: 4px;
+}
+
+.btn-cancel:hover {
+    background-color: #ff1d7b;
+    cursor: pointer;
+}
