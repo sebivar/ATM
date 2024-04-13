@@ -115,3 +115,45 @@ depositButton?.addEventListener('click', ()=>{
 
 
 })
+
+const withdrawButton = document.getElementById('withdraw-button');
+console.log('withdrawButton',withdrawButton);
+withdrawButton?.addEventListener('click', ()=> {
+
+
+    const amount = prompt('Please enter the amount you want to withdraw');
+    console.log('amount',amount);
+
+    if (parseFloat(amount || '0') > balance) {
+        
+
+        const systemMessage = document.getElementById('system-message');
+    console.log('systemMessage', systemMessage);
+    if(systemMessage){
+    systemMessage.textContent= `INSUFFICIENT FUNDS!`
+    }
+    systemMessage?.classList.remove('success');
+    systemMessage?.classList.remove('info');
+    systemMessage?.classList.add('error');
+
+
+    } else {
+
+        balance= balance - parseFloat(amount || '0');
+
+
+
+        const systemMessage = document.getElementById('system-message');
+    console.log('systemMessage', systemMessage);
+    if(systemMessage){
+    systemMessage.textContent= `${amount} EUR WITHDRAWN. AVAILABLE BALANCE: ${balance} EUR`
+    }
+    systemMessage?.classList.add('success');
+    systemMessage?.classList.remove('info');
+    systemMessage?.classList.remove('error');
+
+    }
+
+
+})
+
