@@ -75,6 +75,17 @@
 
 }
 
+.info {
+    color:  #979797;
+}
+
+.success {
+    color: #778CA2 ;
+}
+
+.error {
+    color: #FE4D97 ;
+}
 
 .hidden {
     display: none;
