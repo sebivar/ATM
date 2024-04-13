@@ -1,4 +1,5 @@
 const CORRECT_PIN = '1234';
+let balance = 50;
 
 
 const enterButton = document.getElementById('enter-button');
@@ -79,3 +80,38 @@ cancelButton?.addEventListener('click', ()=>{
 
 })
 
+const balanceButton = document.getElementById('balance-button');
+console.log('balanceButton', balanceButton);
+balanceButton?.addEventListener('click', ()=>{
+    const systemMessage = document.getElementById('system-message');
+    console.log('systemMessage', systemMessage);
+    if(systemMessage){
+    systemMessage.textContent= `AVAILABLE BALANCE: ${balance} EUR`
+    }
+    systemMessage?.classList.add('success');
+    systemMessage?.classList.remove('info');
+    systemMessage?.classList.remove('error');
+
+})
+
+const depositButton = document.getElementById('deposit-button');
+console.log('depositButton', depositButton);
+depositButton?.addEventListener('click', ()=>{
+
+    const amount = prompt('Please enter the amount you want to deposit');
+    console.log('amount',amount);
+
+    balance= balance + parseFloat(amount || '0');
+
+    const systemMessage = document.getElementById('system-message');
+    console.log('systemMessage', systemMessage);
+    if(systemMessage){
+    systemMessage.textContent= `${amount} EUR DEPOSITED. AVAILABLE BALANCE: ${balance} EUR`
+    }
+    systemMessage?.classList.add('success');
+    systemMessage?.classList.remove('info');
+    systemMessage?.classList.remove('error');
+
+
+
+})
