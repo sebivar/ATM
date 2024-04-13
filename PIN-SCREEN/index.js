@@ -4,7 +4,7 @@ const CORRECT_PIN = '1234';
 const enterButton = document.getElementById('enter-button');
 console.log('enterButton' , enterButton  );
 enterButton?.addEventListener('click' , () => {
-    console.log('You clicked the button!');
+    console.log('You clicked the enter button!');
 
 
 const input = document.getElementById('pin-input');
@@ -48,3 +48,34 @@ console.log('input', input);
         console.error('Input is not HTMLInputElement');
     }
 })
+
+
+const cancelButton = document.getElementById('cancel-button');
+console.log('cancelButton', cancelButton);
+cancelButton?.addEventListener('click', ()=>{
+    console.log('You clicked the cancel button!');
+    
+
+    const buttonContainer = document.getElementById('button-container');
+             console.log('buttonContainer', buttonContainer);
+             buttonContainer?.classList.add('hidden');
+
+             const systemMessage = document.getElementById('system-message');
+             console.log('systemMessage', systemMessage);
+             systemMessage?.classList.add('hidden');
+
+             const pinSection = document.getElementById('pin-section');
+             console.log('pinSection', pinSection);
+             pinSection?.classList.remove('hidden');
+
+             const subtitleText2 = document.getElementById('subtitle-text2');
+             console.log('subtitleText2', subtitleText2);
+             subtitleText2?.classList.add('hidden');
+
+             const subtitleText = document.getElementById('subtitle-text');
+             console.log('subtitleText', subtitleText);
+             subtitleText?.classList.remove('hidden');
+
+
+})
+
