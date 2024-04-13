@@ -18,30 +18,30 @@
 
             <div class="container">
                 <div class="h1-text">ATM</div>
-                <div class="regular-text">PLEASE AUTHENTICATE</div>
+                <div id="subtitle-text" class="regular-text">PLEASE AUTHENTICATE</div>
             </div>
 
-            <div class="input-group">
-                <input class="input" placeholder="Enter PIN">
+            <div id="pin-section" class="input-group">
+                <input id="pin-input" class="input" placeholder="Enter PIN">
                 <div class="btn-container">
-                <button class="btn btn-regular button-text">ENTER</button>
+                <button id="enter-button" class="btn btn-regular button-text">ENTER</button>
 
                 </div>
 
             </div>
 
-            <div class="button-container">
+            <div id="button-container" class="button-container">
                 <div class="button-group1">
-                    <button class="btn btn-regular button-text big-button">BALANCE</button>
-                    <button class="btn btn-regular button-text big-button">DEPOSIT</button>
+                    <button id="balance-button" class="btn btn-regular button-text big-button">BALANCE</button>
+                    <button id="deposit-button" class="btn btn-regular button-text big-button">DEPOSIT</button>
                 </div>
                 <div class="button-group2">
-                    <button class="btn btn-regular button-text big-button">WITHDRAW</button>
-                    <button class="btn btn-cancel button-text big-button">CANCEL</button>
+                    <button id="withdraw-button" class="btn btn-regular button-text big-button">WITHDRAW</button>
+                    <button id="cancel-button" class="btn btn-cancel button-text big-button">CANCEL</button>
                 </div>
             </div>
 
-            <div class="info-text">WAITING FOR AN OPERATION</div>
+            <div id="system-message" class="info-text">WAITING FOR AN OPERATION</div>
 
         </div>
 
@@ -51,7 +51,7 @@
     </div>
 
     <script src="index.js"></script>
-    
+
 </body>
 
 

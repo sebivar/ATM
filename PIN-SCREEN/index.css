@@ -74,3 +74,12 @@
     text-align: center;
 
 }
+
+#button-container {
+    display: none;
+}
+
+#system-message {
+    display: none;
+}
+
