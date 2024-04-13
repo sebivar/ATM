@@ -24,9 +24,17 @@ console.log('input', input);
              console.log('systemMessage', systemMessage);
              systemMessage?.classList.remove('hidden');
 
-             const pinSection = document.getElementById('pin-section')
-             console.log('pinSection', pinSection)
-             pinSection?.classList.add('hidden')
+             const pinSection = document.getElementById('pin-section');
+             console.log('pinSection', pinSection);
+             pinSection?.classList.add('hidden');
+
+             const subtitleText2 = document.getElementById('subtitle-text2');
+             console.log('subtitleText2', subtitleText2);
+             subtitleText2?.classList.remove('hidden');
+
+             const subtitleText = document.getElementById('subtitle-text');
+             console.log('subtitleText', subtitleText);
+             subtitleText?.classList.add('hidden');
             
             }
             else {
