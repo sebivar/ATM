@@ -16,7 +16,17 @@ console.log('input', input);
 
              if (pin === CORRECT_PIN) {
             
-            console.log('Correct PIN entered!')
+             const buttonContainer = document.getElementById('button-container');
+             console.log('buttonContainer', buttonContainer);
+             buttonContainer?.classList.remove('hidden');
+
+             const systemMessage = document.getElementById('system-message');
+             console.log('systemMessage', systemMessage);
+             systemMessage?.classList.remove('hidden');
+
+             const pinSection = document.getElementById('pin-section')
+             console.log('pinSection', pinSection)
+             pinSection?.classList.add('hidden')
             
             }
             else {
