@@ -100,18 +100,23 @@ depositButton?.addEventListener('click', ()=>{
 
     const amount = prompt('Please enter the amount you want to deposit');
     console.log('amount',amount);
+    if (amount === null) return;
+    if (!isNaN(parseFloat(amount)) && parseFloat(amount) > 0){
 
     balance= balance + parseFloat(amount || '0');
 
     const systemMessage = document.getElementById('system-message');
     console.log('systemMessage', systemMessage);
     if(systemMessage){
-    systemMessage.textContent= `${amount} EUR DEPOSITED. AVAILABLE BALANCE: ${balance} EUR`
+    systemMessage.textContent= `${amount} EUR DEPOSITED. YOUR NEW BALANCE IS: ${balance} EUR`
     }
     systemMessage?.classList.add('success');
     systemMessage?.classList.remove('info');
     systemMessage?.classList.remove('error');
 
+   } else {
+    alert('Invalid input. Please provide a positive number!')
+   }
 
 
 })
@@ -124,6 +129,8 @@ withdrawButton?.addEventListener('click', ()=> {
     const amount = prompt('Please enter the amount you want to withdraw');
     console.log('amount',amount);
 
+    if (amount === null) return;
+    if (!isNaN(parseFloat(amount)) && parseFloat(amount) > 0){
     if (parseFloat(amount || '0') > balance) {
         
 
@@ -146,14 +153,16 @@ withdrawButton?.addEventListener('click', ()=> {
         const systemMessage = document.getElementById('system-message');
     console.log('systemMessage', systemMessage);
     if(systemMessage){
-    systemMessage.textContent= `${amount} EUR WITHDRAWN. AVAILABLE BALANCE: ${balance} EUR`
+    systemMessage.textContent= `${amount} EUR WITHDRAWN. YOUR NEW BALANCE IS: ${balance} EUR`
     }
     systemMessage?.classList.add('success');
     systemMessage?.classList.remove('info');
     systemMessage?.classList.remove('error');
 
     }
-
+  } else{
+    alert('Invalid input. Please provide a positive number!')
+  }
 
 })
 
